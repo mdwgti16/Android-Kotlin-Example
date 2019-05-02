@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:bind="http://schemas.android.com/apk/res-auto">
     <data>
-        <variable name="adapter" type="com.ls.project.areacard.adapter.ListRecyclerViewAdapter"/>
+        <variable name="main" type="com.ls.project.areacard.MainActivity"/>
     </data>
     <LinearLayout
             xmlns:android="http://schemas.android.com/apk/res/android"
@@ -15,7 +15,7 @@
                 android:id="@+id/recyclerView"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                bind:setAdapter="@{adapter}"
+                bind:setAdapter="@{main.adapter}"
                 />
 
     </LinearLayout>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:id="@+id/nav_graph"
+            app:startDestination="@id/mainFragment">
+    <action android:id="@+id/action_global_secondMain" app:destination="@id/secondActivity"/>
+
+    <fragment android:id="@+id/mainFragment" android:name="com.ls.project.navigation.MainFragment"
+              android:label="MainActivity" tools:layout="@layout/fragment_main">
+        <action android:id="@+id/action_mainFragment_to_secondFragment" app:destination="@id/secondFragment"/>
+        <action android:id="@+id/action_mainFragment_to_secondActivity" app:destination="@id/secondActivity">
+            <argument android:name="message" app:argType="string" app:nullable="true"/>
+        </action>
+    </fragment>
+    <fragment android:id="@+id/secondFragment" android:name="com.ls.project.navigation.SecondFragment"
+              android:label="SecondPage" tools:layout="@layout/fragment_second">
+        <action android:id="@+id/action_secondFragment_to_thirdFragment" app:destination="@id/thirdFragment">
+            <argument android:name="message" app:argType="string" app:nullable="true"/>
+        </action>
+    </fragment>
+    <fragment android:id="@+id/thirdFragment" android:name="com.ls.project.navigation.ThirdFragment"
+              android:label="ThirdPage" tools:layout="@layout/fragment_third">
+        <argument android:name="message" app:argType="string" app:nullable="true"/>
+    </fragment>
+    <activity android:id="@+id/secondActivity" android:name="com.ls.project.navigation.SecondActivity"
+              android:label="SecondActivity" tools:layout="@layout/fragment_second"/>
+
+</navigation>

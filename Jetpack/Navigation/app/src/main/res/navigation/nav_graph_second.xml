@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/nav_graph_second"
+            app:startDestination="@id/secondMainFragment">
+    <argument android:name="message" app:argType="string" app:nullable="true"/>
+    <fragment android:id="@+id/secondMainFragment" android:name="com.ls.project.navigation.SecondMainFragment"
+              android:label="SecondMainFragment">
+        <argument android:name="message" app:argType="string" app:nullable="true"/>
+    </fragment>
+</navigation>
