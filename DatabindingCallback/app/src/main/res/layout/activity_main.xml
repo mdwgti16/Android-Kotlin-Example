@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<android.support.v4.widget.NestedScrollView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity">
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:layout_gravity="center"
+                android:text="Observable Field"/>
+        <LinearLayout android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:layout_margin="10dp">
+            <EditText android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:hint="Input text"
+                      android:id="@+id/et_field"
+                      android:layout_weight="1"/>
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tv_field"
+                    android:textSize="20sp"
+                    android:layout_gravity="center"
+                    android:hint="Observable Field"/>
+        </LinearLayout>
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:layout_gravity="center"
+                android:text="Observable Array List"/>
+        <LinearLayout android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:layout_margin="10dp">
+            <EditText android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:lines="2"
+                      android:hint="Input text"
+                      android:layout_gravity="center"
+                      android:id="@+id/et_array_list"
+                      android:layout_weight="1"/>
+            <LinearLayout android:layout_width="wrap_content"
+                          android:layout_height="wrap_content"
+                          android:orientation="vertical">
+                <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/btn_add_listItem"
+                        android:textSize="12sp"
+                        android:textAllCaps="false"
+                        android:text="Add list item"/>
+                <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/btn_clear"
+                        android:textSize="12sp"
+                        android:textAllCaps="false"
+                        android:text="Clear"/>
+            </LinearLayout>
+            <LinearLayout android:layout_width="wrap_content"
+                          android:layout_height="wrap_content"
+                          android:orientation="vertical">
+                <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/btn_remove"
+                        android:textSize="12sp"
+                        android:textAllCaps="false"
+                        android:text="Remove Item"/>
+                <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/btn_reverse"
+                        android:textSize="12sp"
+                        android:textAllCaps="false"
+                        android:text="Reverse"/>
+            </LinearLayout>
+
+        </LinearLayout>
+        <ListView android:layout_width="match_parent"
+                  android:layout_height="300dp"
+                  android:id="@+id/listView_arrayList"/>
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:layout_gravity="center"
+                android:text="Observable Array Map"/>
+        <LinearLayout android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:layout_margin="10dp">
+            <EditText android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:id="@+id/et_array_map"
+                      android:hint="Input text"
+                      android:layout_gravity="bottom"
+                      android:layout_weight="1"/>
+            <RadioGroup android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:id="@+id/radioGroup">
+                <RadioButton android:layout_width="wrap_content"
+                             android:layout_height="wrap_content"
+                             android:id="@+id/radio_true"
+                             android:focusedByDefault="true"
+                             android:text="True"/>
+                <RadioButton android:layout_width="wrap_content"
+                             android:layout_height="wrap_content"
+                             android:id="@+id/radio_false"
+                             android:text="False"/>
+
+            </RadioGroup>
+            <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/btn_add_mapItem"
+                    android:textSize="12sp"
+                    android:layout_gravity="bottom"
+                    android:textAllCaps="false"
+                    android:text="Add map item"/>
+        </LinearLayout>
+        <ListView android:layout_width="match_parent"
+                  android:layout_height="300dp"
+                  android:id="@+id/listView_arrayMap"/>
+
+    </LinearLayout>
+</android.support.v4.widget.NestedScrollView>
